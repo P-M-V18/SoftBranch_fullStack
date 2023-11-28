@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: url(images/regi-back.jpg);
+    background-size: cover;
+}
+.eror{
+    color: red;
+}
+.container{
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.container header{
+    font-size: 2rem;
+    color:rgb(192, 14, 156);
+    font-weight: 700;
+    text-align: center;
+}
+.container .form{
+    margin-top: 20px;
+}
+.form .input-box{
+    width: 100%;
+    margin-top: 20px;
+}
+.input-box label{
+    color:rgb(192, 14, 156);
+}
+.input-box label::after{
+    content: ":";
+}
+.form .input-box input{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline-style: none;
+    font-size: 1rem;
+    color: rgb(96, 11, 79);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+    margin-top: 3px;
+}
+.form .input-box input::placeholder{
+    color: rgb(240, 143, 211);
+}
+.form .input-box input:focus{
+    border: solid 2px rgb(192, 14, 156);
+    box-shadow: 2px 2px 2px rgba(192, 14, 156, 0.5);
+}
+.form .column{
+    display: flex;
+    column-gap: 15px;
+}
+.form .gender-box{
+    margin-top: 20px;
+}
+.gender-box h3{
+    color:rgb(192, 14, 156);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender){
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+.form .gender{
+    column-gap: 5px;
+}
+.form :where(.gender input, .gender label){
+    cursor: pointer;
+    color: rgb(240, 143, 211);
+}
+.form button{
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 400;
+    transition: 0.5s linear; 
+    background: linear-gradient(to left bottom,rgb(192, 14, 156), blue);
+}
+.form button:hover{
+    background: linear-gradient(to left bottom, blue,rgb(192, 14, 156));
+}
+@media screen and (max-width:500px){
+    .form .column{
+        flex-wrap: wrap;
+    }
+}
